@@ -4,6 +4,6 @@ data<-subset(alldata,alldata[,"Date"]=="1/2/2007"|alldata[,"Date"]=="2/2/2007")
 windows()
 GAP<-data[,"Global_active_power"]
 hist(GAP,col="red",xlab="Global active power (kilowatts)", main = paste("Global Active Power"))
-dev.copy(device=png,"F:/E/Courses/DataScienceSpecialization/ExploratoryDataAnalysis/data/ExData_Plotting1/plot1.png")
+dev.copy(device=png,"plot1.png",width=480,height=480,units="px")
 dev.off()
 

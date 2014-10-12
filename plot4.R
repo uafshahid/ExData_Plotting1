@@ -6,7 +6,7 @@ data<-cbind(data,NewDate)
 days<-weekdays(data$NewDate)
 len<-length(days)
 windows()
-days<-c("Thur","Fri","Sat")
+
 par(mfrow=c(2,2))
 
 plot(data$Global_active_power,type="l",ylab="Global active power",xaxt="n",xlab="")
@@ -25,5 +25,5 @@ legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),c
 plot(data$Global_reactive_power,type="l",ylab="Global_reactive_power",xaxt="n",xlab="datetime")
 axis(1,at=c(0,len/2,len),labels=c("Thur","Fri","Sat"))
 
-dev.copy(device=png,"F:/E/Courses/DataScienceSpecialization/ExploratoryDataAnalysis/data/ExData_Plotting1/plot4.png",width=480,height=480,units="px",pointsize = 9)
+dev.copy(device=png,"plot4.png",width=480,height=480,units="px",pointsize = 9)
 dev.off()
